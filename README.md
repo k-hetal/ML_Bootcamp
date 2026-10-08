@@ -62,7 +62,7 @@ WER = (substitutions + deletions + insertions) / words in the reference
 
 The words are lined up with a standard edit-distance alignment (`wer.py`). Before comparing, both texts are lowercased and stripped of punctuation and `[mm:ss]` stamps, and numbers like 1,000 are written as 1000. There is a checkbox to ignore fillers such as "um" and "uh". The tab shows WER, accuracy (1 minus WER), the three error counts, a table with the raw and the refined transcript scored against the same reference, and a colour-coded word-by-word alignment.
 
-Two things to keep in mind. WER is only an accuracy figure if the reference is independent of the system. If you paste the raw Whisper text as the "reference" and the refined text as the transcript, the number only tells you how much the refinement step changed, not how correct either one is. And WER treats every word equally, so a dropped "not" costs the same as a typo. That is why the decisions and tasks are also checked by hand against the recording.
+WER is independent of the system. If you paste the raw Whisper text as the "reference" and the refined text as the transcript, the number only tells you how much the refinement step changed, not how correct either one is. And WER treats every word equally, so a dropped "not" costs the same as a typo. That is why the decisions and tasks are also checked by hand against the recording.
 
 
 ## Files
